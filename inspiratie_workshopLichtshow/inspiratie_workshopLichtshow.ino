@@ -28,7 +28,7 @@ void loop() {
 
   switch (huidigEffect) {
     case 0: 
-      blink(); 
+      blink(geel); 
       break;
     case 1: 
       regenboog(); 
@@ -43,8 +43,8 @@ void loop() {
   }
 }
 
-void blink(){
-    zetAlleLedsAan(rood);
+void blink(int kleur[]){
+    zetAlleLedsAan(kleur);
     wacht(300);
     zetAlleLedsUit();
     wacht(300);

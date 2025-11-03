@@ -16,6 +16,8 @@ int zwart[]   = {0, 0, 0};
 
 void meetLicht() {
   lichtsterkte = analogRead(LDR_PIN);
+  Serial.print("Huidige lichtsterkte: ");
+  Serial.println(lichtsterkte);
 }
 
 void wacht(int basisTijd) {
