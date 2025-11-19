@@ -97,13 +97,9 @@ void doof(int kleur[], int stappen, int snelheid) {
   }
 }
 
-void effectDebugger(int nummer) {
-  herhaal(++nummer, blink_builtin);
-}
-
-void blink_builtin() {
-  digitalWrite(LED_BUILT_IN, HIGH);
-  delay(100);
+void blink_builtin_helper() {
   digitalWrite(LED_BUILT_IN, LOW);
-  delay(100);
+  vTaskDelay(500 / portTICK_PERIOD_MS);
+  digitalWrite(LED_BUILT_IN, HIGH);
+  vTaskDelay(500 / portTICK_PERIOD_MS);
 }

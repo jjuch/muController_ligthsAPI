@@ -36,7 +36,6 @@ void herhaal(int aantalKeer, void (*functie)());
 void wisselKleuren(int leds[], int* kleuren1[], int* kleuren2[], int lengte);
 void lichtOp(int kleur[], int stappen, int snelheid);
 void doof(int kleur[], int stappen, int snelheid);
-void effectDebugger(int nummer);
-void blink_builtin();
+void blink_builtin_helper();
 
 #endif
