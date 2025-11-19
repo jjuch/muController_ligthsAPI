@@ -102,8 +102,8 @@ void effectDebugger(int nummer) {
 }
 
 void blink_builtin() {
-  digitalWrite(LED_BUILT_IN, HIGH);
-  delay(100);
   digitalWrite(LED_BUILT_IN, LOW);
+  delay(100);
+  digitalWrite(LED_BUILT_IN, HIGH);
   delay(100);
 }

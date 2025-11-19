@@ -16,6 +16,7 @@ void setup() {
   pinMode(LDR_PIN, INPUT);
   pinMode(BUTTON_PIN, INPUT_PULLUP); // BOOT button is active LOW
   pinMode(LED_BUILT_IN, OUTPUT);
+  digitalWrite(LED_BUILT_IN, HIGH);
   Serial.begin(115200);
 }
 
