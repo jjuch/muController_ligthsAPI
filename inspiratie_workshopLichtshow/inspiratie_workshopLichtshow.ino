@@ -11,11 +11,11 @@ unsigned long lastDebounceTime = 0;
 const unsigned long debounceDelay = 200;
 
 void setup() {
-  
   pixels.begin();
   pixels.setBrightness(50);
   pinMode(LDR_PIN, INPUT);
   pinMode(BUTTON_PIN, INPUT_PULLUP); // BOOT button is active LOW
+  pinMode(LED_BUILT_IN, OUTPUT);
   Serial.begin(115200);
 }
 
@@ -28,7 +28,7 @@ void loop() {
 
   switch (huidigEffect) {
     case 0: 
-      blink(geel); 
+      blink(geel);
       break;
     case 1: 
       regenboog(); 
@@ -41,6 +41,7 @@ void loop() {
       veegEffect(); 
       break;
   }
+  effectDebugger(huidigEffect);
 }
 
 void blink(int kleur[]){

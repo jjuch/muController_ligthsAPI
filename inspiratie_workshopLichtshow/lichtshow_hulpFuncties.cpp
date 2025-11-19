@@ -22,7 +22,7 @@ void meetLicht() {
 
 void wacht(int basisTijd) {
   meetLicht();
-  int aangepasteTijd = map(lichtsterkte, 0, 4095, basisTijd * 2, basisTijd / 2);
+  int aangepasteTijd = map(lichtsterkte, 0, 4095, basisTijd / 4, basisTijd * 4);
   delay(aangepasteTijd);
 }
 
@@ -95,4 +95,15 @@ void doof(int kleur[], int stappen, int snelheid) {
     zetAlleLedsAan(nieuweKleur);
     delay(snelheid);
   }
+}
+
+void effectDebugger(int nummer) {
+  herhaal(++nummer, blink_builtin);
+}
+
+void blink_builtin() {
+  digitalWrite(LED_BUILT_IN, HIGH);
+  delay(100);
+  digitalWrite(LED_BUILT_IN, LOW);
+  delay(100);
 }

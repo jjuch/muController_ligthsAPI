@@ -9,6 +9,7 @@
 #define NUMPIXELS   12
 #define LDR_PIN     1
 #define BUTTON_PIN  9       // GPIO9 is BOOT button on ESP32-C3
+#define LED_BUILT_IN 8      // GPIO8 is the built-in LED on ESP32-C3
 
 // Externe variabelen
 extern Adafruit_NeoPixel pixels;
@@ -35,5 +36,7 @@ void herhaal(int aantalKeer, void (*functie)());
 void wisselKleuren(int leds[], int* kleuren1[], int* kleuren2[], int lengte);
 void lichtOp(int kleur[], int stappen, int snelheid);
 void doof(int kleur[], int stappen, int snelheid);
+void effectDebugger(int nummer);
+void blink_builtin();
 
 #endif

@@ -96,3 +96,14 @@ void doof(int kleur[], int stappen, int snelheid) {
     delay(snelheid);
   }
 }
+
+void effectDebugger(int nummer) {
+  herhaal(++nummer, blink_builtin);
+}
+
+void blink_builtin() {
+  digitalWrite(LED_BUILT_IN, HIGH);
+  delay(100);
+  digitalWrite(LED_BUILT_IN, LOW);
+  delay(100);
+}
